@@ -1,26 +1,19 @@
-# pikalculator
-my personalised pikachu themed python calculator
-Fully functional calculator (add, subtract, multiply, divide, clear)
+# Pikalculator 🧮⚡
 
-Animated Pikachu theme 🐭⚡
+A **Pikachu-themed Python calculator** that lets you do basic math with style!
 
-Responsive design for desktop and mobile
+## 💡 Features
+- 🎯 Add, subtract, multiply & divide
+- 🐍 Built in Python (no heavy dependencies)
+- ⚡ Pikachu graphics and fun UI
+- 🖱️ Button + keyboard input support
+- 📱 Responsive design
 
-Click and keyboard support
+## 🧠 Requirements
+- Python 3.8+
+- (Add any modules if needed)
 
-Lightweight — no external frameworks
-
-🚀 How to Run
-
-Clone this repository
-
-git clone https://github.com/your-username/pikachu-calculator.git
-
-
-Open the folder
-
-cd pikachu-calculator
-
-
-Run the app
-Open index.html in your browser — that’s it!
+## 🚀 How to Run
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/Articbeat/pikalculator.git
