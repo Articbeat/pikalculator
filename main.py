@@ -40,7 +40,7 @@ def on_click(value):
 window = tk.Tk()
 window.title("PIKALKULATOR")
 window.configure(background=BGCOLOR)
-window.geometry("600x500")
+window.geometry("1000x1000")
 
 
 # ---------------------- FRAMES ----------------------
