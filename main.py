@@ -1,22 +1,19 @@
+
 import tkinter as tk
 from PIL import Image, ImageTk
 
-# ---------------------- CONSTANTS ----------------------
 BGCOLOR = "#FFF176"
 BTNCOLOR = "#FFD54F"
 FONT1 = ("Arial", 18)
 FONT2 = ("Pokemon Hollow", 40, "bold")
 FONTBTN = ("Pokemon Hollow", 18, "bold")
 
-
-# ---------------------- FUNCTIONS ----------------------
+#to bring the frame to the front
 def clicked(frame):
-    """Raise the selected frame to the top."""
     frame.tkraise()
 
-
+#handle whatt buttons do when clicked
 def on_click(value):
-    """Handle calculator button clicks."""
     current = calc_display.get()
 
     if value == "=":
@@ -36,22 +33,18 @@ def on_click(value):
         calc_display.insert(tk.END, value)
 
 
-# ---------------------- WINDOW SETUP ----------------------
+#frame/window setup
 window = tk.Tk()
 window.title("PIKALKULATOR")
 window.configure(background=BGCOLOR)
 window.geometry("1000x1000")
 
-
-# ---------------------- FRAMES ----------------------
 frame1 = tk.Frame(window, bg=BGCOLOR)
 frame1.place(relwidth=1, relheight=1)
 
 frame2 = tk.Frame(window, bg=BGCOLOR)
 frame2.place(relwidth=1, relheight=1)
 
-
-# ---------------------- CALCULATOR (Frame 2) ----------------------
 # Display bar
 calc_display = tk.Entry(
     frame2,
@@ -62,11 +55,11 @@ calc_display = tk.Entry(
 )
 calc_display.place(relx=0.5, y=60, width=400, height=50, anchor="center")
 
-# ✅ Create a centered container for all buttons
+#centered button frame
 btn_frame = tk.Frame(frame2, bg=BGCOLOR)
-btn_frame.place(relx=0.5, rely=0.6, anchor="center")  # Centered under the display
+btn_frame.place(relx=0.5, rely=0.6, anchor="center")  
 
-# Button layout (rows and columns)
+# Button layout 
 buttons = [
     ["7", "8", "9", "/"],
     ["4", "5", "6", "*"],
@@ -102,7 +95,7 @@ clear_btn = tk.Button(
 clear_btn.grid(row=4, column=0, columnspan=4, pady=(10, 0))
 
 
-# ---------------------- MAIN MENU (Frame 1) ----------------------
+
 label = tk.Label(
     frame1,
     text="PIKALKULATOR",
@@ -114,7 +107,7 @@ label.pack(pady=(150, 20))
 
 # Start button with image fallback
 try:
-    start_img = Image.open("rounded_button.png").resize((200, 60))
+    start_img = Image.open("pngegg.png").resize((200, 60))
     start_img_tk = ImageTk.PhotoImage(start_img)
     start_button = tk.Button(
         frame1,
@@ -165,7 +158,6 @@ try:
 except Exception as e:
     print(f"Error loading Pikachu image: {e}")
 
-
-# ---------------------- START APP ----------------------
+#start
 frame1.tkraise()
 window.mainloop()
